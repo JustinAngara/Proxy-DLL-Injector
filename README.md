@@ -1,12 +1,6 @@
-# Traf Client
+# Proxy Injector
 
-
-# A NEW Minecraft mod I am designing in respect to my 10th year anniversary of the FART mod (Check the link below)
-# https://itsjerryandharry.com/threads/modder.83680
-
-
-![menu preview](images/1.png)
-![menu preview](images/2.png)
+Place in Minecraft mods folder, run, and see your dll injected to any game of your choice.
 
 ## License
 

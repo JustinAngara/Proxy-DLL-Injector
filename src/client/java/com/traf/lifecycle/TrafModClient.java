@@ -1,0 +1,108 @@
+//      ___________              _____          _________ .__  .__               __
+//		\__    ___/___________ _/ ____\         \_   ___ \|  | |__| ____   _____/  |_
+//		|    |  \_  __ \__  \\   __\          /    \  \/|  | |  |/ __ \ /    \   __\
+//		|    |   |  | \// __ \|  |            \     \___|  |_|  \  ___/|   |  \  |
+//		|____|   |__|  (____  /__|             \______  /____/__|\___  >___|  /__|
+//		                    \/                        \/             \/     \/
+//
+//
+//      @Author Justin
+
+package com.traf.lifecycle;
+
+import com.traf.TrafMod;
+import com.traf.lifecycle.display.Display;
+import com.traf.lifecycle.menu.Menu;
+import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
+import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.resources.Identifier;
+
+public class TrafModClient implements ClientModInitializer {
+
+	// this will be the lifetime of the world, not the indivdual hack runnign by itself
+	private static Menu menu;
+	private static long gameTicks=0;
+	private static HackManager hm;
+	private static Minecraft mc;
+	private static KeyListenerManager klm;
+	private static float lastHealth = 20.0f;
+	private Display d;
+
+	@Override
+	public void onInitializeClient() {
+		mc = Minecraft.getInstance();
+		hm = new HackManager();
+
+
+		// add the keybinds
+		klm = new KeyListenerManager(hm);
+		klm.start();
+
+		ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
+			TrafMod.LOGGER.info("Joined a world session");
+			if(mc == null) menu = new Menu(mc.screen, hm);
+
+
+		});
+		// add disply stuff
+		addDisplay();
+
+		// internally lock onto game tick
+		lockToGameTick();
+	}
+
+	public void addDisplay(){
+		d = new Display(mc);
+		HudElementRegistry.addLast(
+			// this gets repeatedly called per tick
+			Identifier.fromNamespaceAndPath(TrafMod.MOD_ID, "hack_list"),(guiGraphics, deltaTracker)->{
+				d.run(guiGraphics);
+			}
+		);
+	}
+	public static long getGameTicks() { return gameTicks; }
+	public static void lockToGameTick(){
+		ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
+			gameTicks = 0;
+		});
+
+		ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> {
+			gameTicks = 0;
+		});
+
+		ClientTickEvents.END_CLIENT_TICK.register(client -> {
+			if (client.player == null) return;
+			if (client.isPaused()) return;
+			LocalPlayer lp = client.player;
+			hm.run(lp);
+			gameTicks++;
+		});
+
+
+		ClientTickEvents.END_CLIENT_TICK.register(client -> {
+			if (client.player == null) return;
+
+			float currentHealth = client.player.getHealth();
+
+			if (currentHealth < lastHealth) {
+				System.out.println("You got damaged: "+currentHealth);
+			}
+
+			lastHealth = currentHealth;
+		});
+
+
+	}
+
+	public static void openMenu(){
+		mc.execute(() -> mc.setScreen(new Menu(mc.screen, hm)));
+	}
+	public static Minecraft getMinecraft(){ return mc; }
+	public static Menu getMenu(){ return menu; }
+
+}
