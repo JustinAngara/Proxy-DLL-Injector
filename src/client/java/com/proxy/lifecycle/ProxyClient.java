@@ -8,21 +8,12 @@
 //
 //      @Author Justin
 
-package com.traf.lifecycle;
+package com.proxy.lifecycle;
 
-import com.traf.TrafMod;
-import com.traf.lifecycle.display.Display;
-import com.traf.lifecycle.menu.Menu;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
-import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.resources.Identifier;
-
-public class TrafModClient implements ClientModInitializer {
+public class ProxyClient implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {

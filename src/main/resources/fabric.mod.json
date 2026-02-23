@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.traf.TrafMod"
+          "com.proxy.TrafMod"
 		],
 		"client": [
-          "com.traf.lifecycle.TrafModClient"
+          "com.proxy.lifecycle.ProxyClient"
 		]
 	},
 	"mixins": [
