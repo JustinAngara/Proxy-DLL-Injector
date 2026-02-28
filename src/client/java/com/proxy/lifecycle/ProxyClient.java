@@ -12,7 +12,7 @@ package com.proxy.lifecycle;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
-
+import com.proxy.injector.EntryPoint;
 public class ProxyClient implements ClientModInitializer {
 
 	@Override
@@ -21,7 +21,7 @@ public class ProxyClient implements ClientModInitializer {
 	// to make injection work simply just go into a game
 	ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
 		// perform injection entry point here
-
+		EntryPoint.setup();
 	});
 
 	}

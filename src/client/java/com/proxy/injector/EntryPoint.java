@@ -13,6 +13,9 @@ public class EntryPoint {
         // bang proxy injection occured
         call();
     }
-    private static native void call();
+    private static void call(){
+
+
+    }
 
 }
