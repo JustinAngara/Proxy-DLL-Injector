@@ -21,7 +21,9 @@ public class ProxyClient implements ClientModInitializer {
 	// to make injection work simply just go into a game
 	ClientPlayConnectionEvents.JOIN.register((handler, sender, client) -> {
 		// perform injection entry point here
-		EntryPoint.setup();
+		String pe = "cs2.exe";
+		EntryPoint ep = new EntryPoint(pe);
+		ep.run();
 	});
 
 	}

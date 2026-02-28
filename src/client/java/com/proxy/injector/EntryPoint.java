@@ -1,21 +1,17 @@
 package com.proxy.injector;
 
 public class EntryPoint {
-    private EntryPoint(){}
+    private String pe;
+    private JNIBridge jb;
     static {
         System.loadLibrary("nativebridge");
     }
-    public static void setup(){
-        // get the jni to add to gradle
-
-        // call the c++ entry
-
-        // bang proxy injection occured
-        call();
+    public EntryPoint(String process){
+        jb = new JNIBridge();
+        pe = process;
     }
-    private static void call(){
-
-
+    public void run(){
+        jb.processInjectEntry(pe);
     }
 
 }
