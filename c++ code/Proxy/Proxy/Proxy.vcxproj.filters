@@ -15,6 +15,9 @@
     <Filter Include="src\Proxy">
       <UniqueIdentifier>{05a759b7-5574-4ed3-92de-0c5a45a1c451}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\extern\ReleaseInjector">
+      <UniqueIdentifier>{8c886737-4a75-4ba5-ade3-803e1788e6ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Proxy.rc">
@@ -33,5 +36,45 @@
     <ClCompile Include="Proxy.cpp">
       <Filter>src\Proxy</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="extern\ReleaseInjector\Cleanup.h">
+      <Filter>src\extern\ReleaseInjector</Filter>
+    </ClInclude>
+    <ClInclude Include="extern\ReleaseInjector\Conditionals.h">
+      <Filter>src\extern\ReleaseInjector</Filter>
+    </ClInclude>
+    <ClInclude Include="extern\ReleaseInjector\Globals.h">
+      <Filter>src\extern\ReleaseInjector</Filter>
+    </ClInclude>
+    <ClInclude Include="extern\ReleaseInjector\HandleGuard.h">
+      <Filter>src\extern\ReleaseInjector</Filter>
+    </ClInclude>
+    <ClInclude Include="extern\ReleaseInjector\InjectorContext.h">
+      <Filter>src\extern\ReleaseInjector</Filter>
+    </ClInclude>
+    <ClInclude Include="extern\ReleaseInjector\ManualMap.h">
+      <Filter>src\extern\ReleaseInjector</Filter>
+    </ClInclude>
+    <ClInclude Include="extern\ReleaseInjector\Memory.h">
+      <Filter>src\extern\ReleaseInjector</Filter>
+    </ClInclude>
+    <ClInclude Include="extern\ReleaseInjector\Procedure.h">
+      <Filter>src\extern\ReleaseInjector</Filter>
+    </ClInclude>
+    <ClInclude Include="extern\ReleaseInjector\Process.h">
+      <Filter>src\extern\ReleaseInjector</Filter>
+    </ClInclude>
+    <ClInclude Include="extern\ReleaseInjector\Resource.h">
+      <Filter>src\extern\ReleaseInjector</Filter>
+    </ClInclude>
+    <ClInclude Include="extern\ReleaseInjector\ShellcodeHelper.h">
+      <Filter>src\extern\ReleaseInjector</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="extern\ReleaseInjector\Injectorv2 (1).lib">
+      <Filter>src\extern\ReleaseInjector</Filter>
+    </Library>
   </ItemGroup>
 </Project>

@@ -136,6 +136,22 @@
     <Image Include="Proxy.ico" />
     <Image Include="small.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="extern\ReleaseInjector\Cleanup.h" />
+    <ClInclude Include="extern\ReleaseInjector\Conditionals.h" />
+    <ClInclude Include="extern\ReleaseInjector\Globals.h" />
+    <ClInclude Include="extern\ReleaseInjector\HandleGuard.h" />
+    <ClInclude Include="extern\ReleaseInjector\InjectorContext.h" />
+    <ClInclude Include="extern\ReleaseInjector\ManualMap.h" />
+    <ClInclude Include="extern\ReleaseInjector\Memory.h" />
+    <ClInclude Include="extern\ReleaseInjector\Procedure.h" />
+    <ClInclude Include="extern\ReleaseInjector\Process.h" />
+    <ClInclude Include="extern\ReleaseInjector\Resource.h" />
+    <ClInclude Include="extern\ReleaseInjector\ShellcodeHelper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="extern\ReleaseInjector\Injectorv2 (1).lib" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
