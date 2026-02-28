@@ -15,9 +15,6 @@
     <Filter Include="src\Proxy">
       <UniqueIdentifier>{05a759b7-5574-4ed3-92de-0c5a45a1c451}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\extern\Injector">
-      <UniqueIdentifier>{fa8e8dd2-69b0-4bcc-9fb1-4234362c78d3}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Proxy.rc">
@@ -36,40 +33,5 @@
     <ClCompile Include="Proxy.cpp">
       <Filter>src\Proxy</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Cleanup.h">
-      <Filter>src\extern\Injector</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Conditionals.h">
-      <Filter>src\extern\Injector</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Globals.h">
-      <Filter>src\extern\Injector</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\HandleGuard.h">
-      <Filter>src\extern\Injector</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\InjectorContext.h">
-      <Filter>src\extern\Injector</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\ManualMap.h">
-      <Filter>src\extern\Injector</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Memory.h">
-      <Filter>src\extern\Injector</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Procedure.h">
-      <Filter>src\extern\Injector</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Process.h">
-      <Filter>src\extern\Injector</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Resource.h">
-      <Filter>src\extern\Injector</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\ShellcodeHelper.h">
-      <Filter>src\extern\Injector</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
