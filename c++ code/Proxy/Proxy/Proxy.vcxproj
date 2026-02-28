@@ -127,12 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h" />
-    <ClInclude Include="Proxy.h" />
-    <ClInclude Include="Resource.h" />
-    <ClInclude Include="targetver.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Proxy.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +135,19 @@
   <ItemGroup>
     <Image Include="Proxy.ico" />
     <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Cleanup.h" />
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Conditionals.h" />
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Globals.h" />
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\HandleGuard.h" />
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\InjectorContext.h" />
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\ManualMap.h" />
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Memory.h" />
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Procedure.h" />
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Process.h" />
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Resource.h" />
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\ShellcodeHelper.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

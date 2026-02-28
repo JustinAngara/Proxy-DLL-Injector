@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Proxy/Proxy.vcxproj" />
+  <Project Path="Proxy/Proxy.vcxproj" Id="fdef5602-9f03-4df2-a55a-122e4a35d360" />
 </Solution>

@@ -1,37 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Proxy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Proxy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src\extern">
+      <UniqueIdentifier>{d8be32ad-2a90-4ef8-bd8f-22e23071e571}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Proxy">
+      <UniqueIdentifier>{05a759b7-5574-4ed3-92de-0c5a45a1c451}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\extern\Injector">
+      <UniqueIdentifier>{fa8e8dd2-69b0-4bcc-9fb1-4234362c78d3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Proxy.rc">
@@ -45,5 +31,45 @@
     <Image Include="Proxy.ico">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Proxy.cpp">
+      <Filter>src\Proxy</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Cleanup.h">
+      <Filter>src\extern\Injector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Conditionals.h">
+      <Filter>src\extern\Injector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Globals.h">
+      <Filter>src\extern\Injector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\HandleGuard.h">
+      <Filter>src\extern\Injector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\InjectorContext.h">
+      <Filter>src\extern\Injector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\ManualMap.h">
+      <Filter>src\extern\Injector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Memory.h">
+      <Filter>src\extern\Injector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Procedure.h">
+      <Filter>src\extern\Injector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Process.h">
+      <Filter>src\extern\Injector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\Resource.h">
+      <Filter>src\extern\Injector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\Downloads\ReleaseInjector\ShellcodeHelper.h">
+      <Filter>src\extern\Injector</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
