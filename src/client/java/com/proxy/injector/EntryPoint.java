@@ -4,7 +4,7 @@ public class EntryPoint {
     private String pe;
     private JNIBridge jb;
     static {
-        System.loadLibrary("nativebridge");
+        System.loadLibrary("nativebridge.dll");
     }
     public EntryPoint(String process){
         jb = new JNIBridge();

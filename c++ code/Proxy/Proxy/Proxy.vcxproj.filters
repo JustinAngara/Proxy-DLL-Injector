@@ -18,6 +18,12 @@
     <Filter Include="src\extern\ReleaseInjector">
       <UniqueIdentifier>{8c886737-4a75-4ba5-ade3-803e1788e6ec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\JNIHandler">
+      <UniqueIdentifier>{df03cb63-29bc-4f80-8015-51d3b800ea02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\extern\JNI">
+      <UniqueIdentifier>{005b6a1a-5af9-4921-8482-1e0aab4a5acb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Proxy.rc">
@@ -71,10 +77,16 @@
     <ClInclude Include="extern\ReleaseInjector\ShellcodeHelper.h">
       <Filter>src\extern\ReleaseInjector</Filter>
     </ClInclude>
+    <ClInclude Include="JNIHandler.h">
+      <Filter>src\JNIHandler</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="extern\ReleaseInjector\Injectorv2 (1).lib">
       <Filter>src\extern\ReleaseInjector</Filter>
+    </Library>
+    <Library Include="extern\JNI\jnipp.lib">
+      <Filter>src\extern\JNI</Filter>
     </Library>
   </ItemGroup>
 </Project>

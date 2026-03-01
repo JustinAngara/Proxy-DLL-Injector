@@ -148,8 +148,10 @@
     <ClInclude Include="extern\ReleaseInjector\Process.h" />
     <ClInclude Include="extern\ReleaseInjector\Resource.h" />
     <ClInclude Include="extern\ReleaseInjector\ShellcodeHelper.h" />
+    <ClInclude Include="JNIHandler.h" />
   </ItemGroup>
   <ItemGroup>
+    <Library Include="extern\JNI\jnipp.lib" />
     <Library Include="extern\ReleaseInjector\Injectorv2 (1).lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
