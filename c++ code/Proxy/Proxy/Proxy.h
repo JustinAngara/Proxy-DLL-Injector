@@ -1,3 +1,10 @@
 #pragma once
-
-#include "resource.h"
+namespace Proxy
+{
+	namespace Setup
+	{
+		void Setup();
+		void ConnectJNI();
+	}
+	void Run();
+}

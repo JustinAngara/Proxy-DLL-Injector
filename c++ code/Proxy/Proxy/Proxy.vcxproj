@@ -149,6 +149,7 @@
     <ClInclude Include="extern\ReleaseInjector\Resource.h" />
     <ClInclude Include="extern\ReleaseInjector\ShellcodeHelper.h" />
     <ClInclude Include="JNIHandler.h" />
+    <ClInclude Include="Proxy.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="extern\JNI\jnipp.lib" />

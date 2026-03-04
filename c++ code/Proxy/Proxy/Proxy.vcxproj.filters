@@ -80,6 +80,9 @@
     <ClInclude Include="JNIHandler.h">
       <Filter>src\JNIHandler</Filter>
     </ClInclude>
+    <ClInclude Include="Proxy.h">
+      <Filter>src\Proxy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="extern\ReleaseInjector\Injectorv2 (1).lib">
