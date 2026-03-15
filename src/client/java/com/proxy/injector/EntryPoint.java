@@ -1,5 +1,10 @@
 package com.proxy.injector;
 
+/**
+ * perform any sort of working cog into the minecraft mod
+ * process execution
+ * jni bridge
+ * */
 public class EntryPoint {
     private String pe;
     private JNIBridge jb;
