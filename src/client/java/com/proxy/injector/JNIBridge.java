@@ -12,7 +12,9 @@ public class JNIBridge {
     }
 
     public native void processInjectEntry(String processExe);
-    public void test(){
+
+
+    public static void main(String[] args){
         JNIBridge jb = new JNIBridge();
         jb.processInjectEntry("cs2.exe");
     }
